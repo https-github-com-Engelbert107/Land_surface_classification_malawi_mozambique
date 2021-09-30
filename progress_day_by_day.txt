@@ -1,0 +1,5 @@
+Progress day by day:
+
+2021/09/30  1. I updated my notebook. 
+            2. Search about how to detect tobacco plant with NDVI.
+            3. I was expected to rewrite some functions in my notebook and python script but I didn't finish.
