@@ -1,5 +1,9 @@
 My progress for everyday
 
+
 1. Today I uploaded my notebook
-   
-   
+   I have been reading somethings related on Remotesensing
+
+
+06/10 - Reading document about detecting vegetable from NDVI
+      - updating my code for time series
