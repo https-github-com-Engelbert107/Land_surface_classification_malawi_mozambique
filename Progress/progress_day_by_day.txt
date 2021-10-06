@@ -11,5 +11,9 @@ Progress day by day:
             2. I try to use k-means on NDVI file in order to found more information but I need to read
                more about how to get a good interpretation from the result I got.
                
-2021/10/05  1. I search ad read about dimensionality reduction techniques.
+2021/10/05  1. I search and read about dimensionality reduction techniques.
             2. I try to apply PCA on NDVI but I got an error but still trying.
+            
+2021/10/06  1. I did not reach yesterday's goal about PCA because I found it can be useless
+            2. I did some explorations VARI and WDRI.
+            3. I did the scatter plot between band 4 and 8 but it doesn't give me information or I am not able to come with a clear interpretation.
