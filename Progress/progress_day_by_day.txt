@@ -17,3 +17,6 @@ Progress day by day:
 2021/10/06  1. I did not reach yesterday's goal about PCA because I found it can be useless
             2. I did some explorations VARI and WDRI.
             3. I did the scatter plot between band 4 and 8 but it doesn't give me information or I am not able to come with a clear interpretation.
+
+2021/10/07  1. Make research about how to use get time series unsing NDVI
+        
