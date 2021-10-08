@@ -7,3 +7,9 @@ My progress for everyday
 
 06/10 - Reading document about detecting vegetable from NDVI
       - updating my code for time series
+
+07/10 Introduction to earth engine
+
+
+07/10 Trying to use google engine in order to get timeseries from NDVI
+
