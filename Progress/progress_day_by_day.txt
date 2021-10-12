@@ -23,5 +23,8 @@ Progress day by day:
 2021/10/08  1. Read papers about time series with NDVI
 
 2021/10/07  1. Implementation of NDVI time series with Landsat 8 dataset
-            2. Read about NDVI time series analysis 
+            2. Read about NDVI time series analysis
+
+2021/10/07  1. NDVI for Malawi
+            2. Read about NDVI time series analysis
         
