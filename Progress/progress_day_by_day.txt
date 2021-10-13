@@ -27,4 +27,7 @@ Progress day by day:
 
 2021/10/12  1. NDVI for Malawi
             2. Read about classification using NDVI time series
+            
+2021/10/12  1. Update time series notebook
+            2. Read about classification using NDVI time series
         
