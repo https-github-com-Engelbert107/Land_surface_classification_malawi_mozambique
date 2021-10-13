@@ -1,7 +1,7 @@
 
 from function_display_map import display_map
 
-from param import shapefile, latitude, longitude
+from params import shapefile, latitude, longitude
 
 
 def main():

@@ -1,16 +1,13 @@
 
-from products import products_gdf
 from function_download_ID_data import Download_Random_ProductID_Sentinel2_Data
-from param import path_geojson_file, start_date, end_date
+from params import path_geojson_file, start_date, end_date, platformname
+from params import processinglevel, cloudcoverpercentage
 
-
-products_gdf_uuid = products_gdf.uuid
 
 
 def main():
 
-    Download_Random_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date)
-
+    Download_Random_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date, platformname, processinglevel, cloudcoverpercentage)
 
 
 if __name__ == "__main__":

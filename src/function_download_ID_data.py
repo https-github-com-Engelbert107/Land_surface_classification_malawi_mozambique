@@ -2,9 +2,8 @@
 import random
 from sentinelsat.sentinel import read_geojson, geojson_to_wkt
 
-from params import api, start_date, end_date, platformname
-from params import processinglevel, cloudcoverpercentage
-
+from params import path_geojson_file, start_date, end_date, platformname
+from params import api, processinglevel, cloudcoverpercentage
 
 
 # This function take as input a path for the geoson file, started and ended date for the tobacco crop,

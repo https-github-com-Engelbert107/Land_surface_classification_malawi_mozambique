@@ -6,4 +6,4 @@ To download the data, you need to:
 2. create an account on http://geojson.io/ for geojson file
 
 
-To visualize a map, you need to download a shape file on https://www.diva-gis.org/gdata.
+To visualize a map with shape file, you need to download a shape file on https://www.diva-gis.org/gdata.

@@ -1,14 +1,13 @@
 
-import sentinelsat
-from sentinelsat.sentinel import SentinelAPI, read_geojson, geojson_to_wkt
+from sentinelsat.sentinel import read_geojson, geojson_to_wkt
 
-from param import api, path_geojson_file, start_date, end_date, cloudcoverpercentage
+from params import api, path_geojson_file, start_date, end_date, cloudcoverpercentage
 
 # This function take as input a path for the geoson file, started and ended date for the tobacco crop,
 # print the number of ID products, check if the products ID is available online,
 # print he number of products ID available online, download all the data for all available ID
 
-def Download_All_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date):
+def Download_All_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date, cloudcoverpercentage):
     
     cpt = 0
     lis_of_index_products_online = []

@@ -1,0 +1,8 @@
+numpy==1.21.2
+pandas==1.3.3
+geopandas==0.9.0
+rasterio==1.2.8
+folium==0.12.1
+shapely==1.7.1
+sentinelsat==1.1.0
+statsmodels==0.13.0

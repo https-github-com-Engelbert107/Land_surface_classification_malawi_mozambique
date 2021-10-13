@@ -1,17 +1,15 @@
 
-import random
 from sentinelsat.sentinel import read_geojson, geojson_to_wkt
 
-from params import api, start_date, end_date, platformname
-from params import processinglevel, cloudcoverpercentage
-
+from params import path_geojson_file, start_date, end_date, platformname
+from params import api, processinglevel, cloudcoverpercentage
 
 
 # This function take as input a path for the geoson file, started and ended date for the tobacco crop,
 # print the number of ID products, check if the products ID is available online,
-# print he number of products ID available online, download the data for a random particular ID
+# print he number of products ID available online, download all the data for all available ID
 
-def Download_Random_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date, platformname, processinglevel, cloudcoverpercentage):
+def Download_All_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date, platformname, processinglevel, cloudcoverpercentage):
     
     cpt = 0
     lis_of_index_products_online = []
@@ -59,13 +57,14 @@ def Download_Random_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_
     print()
     print(f"The number of available products online are : {cpt}")
     
-    # check if the list is empty
-    if len(lis_of_index_products_online) == 0:
-        
-        raise ValueError("You can't proceed to the download now because there is no product available online at the moment.")
+    for k in range(len(lis_of_index_products_online)):
     
-    else:
-        
-        # Downloading for a particular ID randomly from the list of index
-        choice_index_product_random = random.choice(lis_of_index_products_online)
-        api.download(products_gdf['uuid'][choice_index_product_random])
+        # check if the list is empty
+        if len(lis_of_index_products_online) == 0:
+
+            raise ValueError("You can't proceed to the download now because there is no product available online at the moment.")
+
+        else:
+
+            # Downloading all the available product from the list of index
+            api.download(products_gdf['uuid'][k])
