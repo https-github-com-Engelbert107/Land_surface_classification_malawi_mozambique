@@ -1,17 +1,15 @@
 
-from products import products_gdf
-from function_download_all_data import Download_All_ProductID_Sentinel2_Data
-from params import path_geojson_file, start_date, end_date, cloudcoverpercentage
+from src.function_download_all_data import Download_All_ProductID_Sentinel2_Data
+from config import args
 
 
-products_gdf_uuid = products_gdf.uuid
 
 
-def main():
+def main(args):
 
-    Download_All_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date, cloudcoverpercentage)
+    Download_All_ProductID_Sentinel2_Data(args.geojson_file, args.start_date, args.end_date, args.cloudcoverpercentage, args.threshold_cloudcover)
 
 
 
 if __name__ == "__main__":
-    main()
+    main(args)

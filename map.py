@@ -1,14 +1,14 @@
 
-from function_display_map import display_map
+from src.function_display_map import display_map
 
-from params import shapefile, latitude, longitude
+from config import args
 
 
-def main():
+def main(args):
 
-    display_map(shapefile, latitude, longitude)
+    display_map(args.geojson_file, args.latitude, args.longitude)
 
 
 
 if __name__ == "__main__":
-    main()
+    main(args)
