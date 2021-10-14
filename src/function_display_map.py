@@ -1,9 +1,10 @@
 
 import folium 
+from config import args
 
 
 
-def display_map(file, latitude, longitude):
+def display_map(args):
     
     # latitude and logitude range for Malawi 
     # [-15.786111, 35.005833] --> center
@@ -21,17 +22,17 @@ def display_map(file, latitude, longitude):
             print("Country name don't match. Try the exact name: Malawi or Mozambique")
         else:
             if Country_Name == "Malawi":
-                if ( range_latitude_Malw[0] <= latitude <= range_latitude_Malw[1] and range_longitude_Malw[0] <= longitude <= range_longitude_Malw[1]):
+                if ( range_latitude_Malw[0] <= args.latitude <= range_latitude_Malw[1] and range_longitude_Malw[0] <= args.longitude <= range_longitude_Malw[1]):
                     pass
                 else:
                     raise ValueError("Your latitude or longitude don't match! Please try again.")
 
             elif Country_Name == "Mozambique":
-                if ( range_latitude_Moz[0] <= latitude <= range_latitude_Moz[1] and range_longitude_Moz[0] <= longitude <= range_longitude_Moz[1]):
+                if ( range_latitude_Moz[0] <= args.latitude <= range_latitude_Moz[1] and range_longitude_Moz[0] <= args.longitude <= range_longitude_Moz[1]):
                     pass
                 else:
                     raise ValueError("Your latitude or longitude don't match! Please try again.")
             
-            M = folium.Map([latitude, longitude], zoom_start=5)
-            folium.GeoJson(file).add_to(M)
+            M = folium.Map([args.latitude, args.longitude], zoom_start=5)
+            folium.GeoJson(args.geojson_file).add_to(M)
             return M

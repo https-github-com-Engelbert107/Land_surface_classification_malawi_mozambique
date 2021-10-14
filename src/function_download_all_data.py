@@ -1,69 +1,68 @@
 
+from sentinelsat import SentinelAPI
 from sentinelsat.sentinel import read_geojson, geojson_to_wkt
 
-from params import path_geojson_file, start_date, end_date, platformname
-from params import api, processinglevel, cloudcoverpercentage
+from config import args
 
 
-# This function take as input a path for the geoson file, started and ended date for the tobacco crop,
-# print the number of ID products, check if the products ID is available online,
-# print he number of products ID available online, download all the data for all available ID
 
-def Download_All_ProductID_Sentinel2_Data(path_geojson_file, start_date, end_date, platformname, processinglevel, cloudcoverpercentage):
+def Download_All_ProductID_Sentinel2_Data(args):
     
     cpt = 0
     lis_of_index_products_online = []
     
-    # Search by polygon
-    footprint = geojson_to_wkt(read_geojson(path_geojson_file))
+    # api
+    api = SentinelAPI(args.user, args.password, "https://scihub.copernicus.eu/dhus")
     
-    # Searching products
+    # Search by polygon, time, and SciHub query keywords
+    footprint = geojson_to_wkt(read_geojson(args.geojson_file))
     products = api.query(footprint,
-                     date = (start_date, end_date),
-                     platformname = platformname,
-                     processinglevel = processinglevel,
-                     cloudcoverpercentage = cloudcoverpercentage
+                     date = (args.start_date, args.end_date),
+                     platformname = args.platformname,
+                     processinglevel = args.processinglevel,
+                     cloudcoverpercentage = args.cloudcoverpercentage
                     )
     
     # Convert the result into pandas
     products_gdf = api.to_geodataframe(products)
     
     # Print the number of the products ID
-    print(f"The number of products are : {len(products_gdf['uuid'])}")
+    print(f"The number of products ID is : {len(products_gdf['uuid'])}")
     
-    # go over the number of products
+    # Go over the number of products
     for i in range(len(products_gdf['uuid'])):
         
-        # get each ID products which is a dictionnary
-        product_id = api.get_product_odata(products_gdf['uuid'][i])
-        
-        # go over the keys and get the values
-        for j in product_id.keys():
-            if (j == 'Online' and product_id[j] == True):
-                
-                # put the index of product available online  in the list
-                lis_of_index_products_online.append(i)
-                    
-                # print the index and ID of available product online
-                print(f"For the index = {i} , the product with ID = {products_gdf['uuid'][i]} is online")
+        # Check the threshold of cloudcoverpercentage for every ID
+        if products_gdf['cloudcoverpercentage'][i]>= args.threshold_cloudcover:
             
-                # count the number of product available online
-                cpt += 1
-    
-    # print the list of the index available products online
+            # Get each ID products which is a dictionnary
+            product_id = api.get_product_odata(products_gdf['uuid'][i])
+        
+            # Go over the keys and get the values
+            for j in product_id.keys():
+                if (product_id[j] == True):
+
+                    # Put the index of product available online  in the list
+                    lis_of_index_products_online.append(i)
+
+                    # Print the index and ID of available product online
+                    print(f"For the index = {i} , the product with ID = {products_gdf['uuid'][i]} is online")
+
+                    # Count the number of product available online
+                    cpt += 1
+
+    # Print the list of the index available products online
     print()
-    print(f"The list of the available index product online is : {lis_of_index_products_online}")
+    print(f"The list of the available product ID index online is : {lis_of_index_products_online}")
     print('----'*10)
     print()
-    print(f"The number of available products online are : {cpt}")
+    print(f"The number of available products ID online is : {cpt}")
     
     for k in range(len(lis_of_index_products_online)):
     
-        # check if the list is empty
+        # Check if the list is empty
         if len(lis_of_index_products_online) == 0:
-
             raise ValueError("You can't proceed to the download now because there is no product available online at the moment.")
-
         else:
 
             # Downloading all the available product from the list of index
