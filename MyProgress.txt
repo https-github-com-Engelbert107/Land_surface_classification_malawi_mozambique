@@ -11,5 +11,10 @@ My progress for everyday
 07/10 Introduction to earth engine
 
 
-07/10 Trying to use google engine in order to get timeseries from NDVI
+08/10 Trying to use google engine in order to get timeseries from NDVI
+
+13/10 using earth engine to get a time series
+
+14/10 working on an autocorrelation 
+
 
