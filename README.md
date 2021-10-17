@@ -33,12 +33,21 @@ The objective of this project is to use remote sensing to:
 
 4. Run code
 
+For download the particular product ID:
+
 ```bash
 
 python download_ID_data.py 
-
-python download_all_data.py
-
-python map.py
-
 ```
+
+For download all the products ID:
+
+```bash
+python download_all_data.py
+```
+
+For display the map for the Area of Interest (AoI):
+```bash
+python map.py
+```
+
