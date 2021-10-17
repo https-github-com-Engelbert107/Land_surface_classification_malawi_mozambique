@@ -9,7 +9,7 @@ The objective of this project is to use remote sensing to:
 
 ## How to run code
 
-1. Download the data. Instruction on how to do this can be found in `Instruction`
+1. Download the data. Instruction on how to do this can be found in [Instruction](https://github.com/https-github-com-Engelbert107/Tobacco_areas_classification_malawi_mozambique/tree/main/Instruction).
 
 2. Setup your new virtual environment.
     - `conda create -n name_env`
