@@ -18,36 +18,49 @@ The objective of this project is to use remote sensing to:
 3. Install dependencies using the `requirements.txt` file provided
 
     You can install `geopandas` by following:
-    - `conda activate -n name_env`
-    - `conda config --env --add channels conda-forge`
-    - `conda config --env --set channel_priority strict`
-    - `conda install geopandas`
-    - `conda install jupyter notebook`
-    - `python -m ipykernel install --name name_env`
+     ```bash 
+     conda activate -n name_env
+     ```
+     ```bash 
+     conda config --env --add channels conda-forge
+     ```
+     ```bash
+     conda config --env --set channel_priority strict
+     ```
+    ```bash 
+    conda install geopandas
+    ```
+     ```bash 
+     conda install jupyter notebook
+     ```
+     ```bash 
+     python -m ipykernel install --name name_env
+     ```
     - Open Anaconda Navigator, select `mane_env`, click on `play` button and select `Open with jupyter notebook`
 
     You can also install `rasterio` and avoid the update by following:
-    - `conda install -c conda-forge rasterio --freeze-installed`
-    - `conda install -c conda-forge rasterio --no-update-deps`
+     ```bash 
+     conda install -c conda-forge rasterio --freeze-installed
+     ```
+     ```bash 
+     conda install -c conda-forge rasterio --no-update-deps
+     ```
 
 
 4. Run code
 
-For download the particular product ID:
+   - For download the particular product ID: 
+    ```bash 
+    python download_ID_data.py
+    ```
 
-```bash
+   - For download all the products ID: 
+    ```bash  
+    python download_all_data.py
+    ```
 
-python download_ID_data.py 
-```
-
-For download all the products ID:
-
-```bash
-python download_all_data.py
-```
-
-For display the map for the Area of Interest (AoI):
-```bash
-python map.py
-```
+   - For display the map for the Area of Interest (AoI): 
+    ```bash 
+    python map.py
+    ```
 
