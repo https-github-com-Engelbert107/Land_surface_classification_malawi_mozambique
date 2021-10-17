@@ -7,7 +7,8 @@ import rasterio
 
 # Open b4 and b8
 
-path = "path_to_folder_R10m"
+#path = "path_to_folder_R10m"
+path = 'C:/Users/engelbert/Downloads/Ishango/Notebook/S2A_MSIL2A_20201109T074131_N0214_R092_T36LYM_20201109T101027.SAFE/GRANULE/L2A_T36LYM_A028117_20201109T080034/IMG_DATA/R10m/'
 
 band4 = rasterio.open(path+'T36LYM_20201109T074131_B04_10m.jp2')
 band8 = rasterio.open(path+'T36LYM_20201109T074131_B08_10m.jp2')

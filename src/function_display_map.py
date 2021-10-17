@@ -1,5 +1,6 @@
 
 import folium 
+import matplotlib.pyplot as plt
 from config import args
 
 
@@ -14,7 +15,7 @@ def display_map(args):
     # latitude and logitude range for Mozambique
     # [-13.2512161, 34.3015278] --> center
     range_latitude_Moz = [-26, -10]
-    range_longitude_Moz = [32, 41]
+    range_longitude_Moz = [31, 41]
     
     while (True):
         Country_Name = input("Enter the name of your chosen country : Malawi or Mozambique\n\n")
