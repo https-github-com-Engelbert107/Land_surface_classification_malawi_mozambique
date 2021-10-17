@@ -51,3 +51,4 @@ def plot():
 
     # Auto adjust subplot to fit figure size
     plt.tight_layout()
+    plt.show()
