@@ -30,6 +30,18 @@ Progress day by day:
             
 2021/10/13  1. Update time series notebook
             2. Read about classification using NDVI time series
+            
 2021/10/14  1. Working on the pipeline
             2. Read about spatial correlation in order to identify the exact period of growing crops
+            
+2021/10/21  1. Read about classification
+
+2021/10/22  1. Implementation of unsupervised classification
+
+2021/10/25  1. Search about how to get free label data
+            2. Read about supervised classification
+
+2021/10/26  1. Implementation of supervised classification
+
+2021/10/27  1. improve the implementation of supervised classification
 
