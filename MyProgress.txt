@@ -15,6 +15,16 @@ My progress for everyday
 
 13/10 using earth engine to get a time series
 
-14/10 working on an autocorrelation 
+14/10  working on an autocorrelation 
+
+16/10 search a ways to identify farms
+
+20/10 reading on unsupervised classification
+
+21/10  updating my notebook with unsupervised classification
+
+24/10 reading on supervised classification
+
+
 
 
