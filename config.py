@@ -15,8 +15,12 @@ args = argparse.Namespace(
     processinglevel = 'Level-2A',
     # set the interval of cloud cover
     cloudcoverpercentage = (0,100),
-    # set the threshold of cloud cover
+    # set the max cloud cover
+    cloud_max = 90,
+    # set the minimum threshold of cloud cover
     threshold_cloudcover = 10,
+    # set the Landsat product (LANDSAT_TM_C1|LANDSAT_ETM_C1|LANDSAT_8_C1)
+    product = 'LANDSAT_8_C1',
     # latitude of mozambique center
     # latitude = -18.665695,
     # latitude zambezia in Mozambique
@@ -30,6 +34,8 @@ args = argparse.Namespace(
     # your password
     password = "password",
     # geojson file
-    geojson_file = "mapMozambique.geojson"   
+    geojson_file = "mapMozambique.geojson" ,
+    # the output directory
+    output_dir = 'path_directory'  
 
 )
