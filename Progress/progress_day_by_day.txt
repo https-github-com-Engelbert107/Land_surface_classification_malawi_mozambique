@@ -45,3 +45,10 @@ Progress day by day:
 
 2021/10/27  1. improve the implementation of supervised classification
 
+2021/11/01  1. functions to download Landsat data
+
+2021/11/02  1. update the functions to download Landsat data
+
+2021/11/03  1. update the pipeline
+            2. update supervised classification
+
