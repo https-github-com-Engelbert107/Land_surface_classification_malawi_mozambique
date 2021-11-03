@@ -49,14 +49,24 @@ The objective of this project is to use remote sensing to:
 
 4. Run code
 
-   - For download the particular product ID: 
+   - Download a particular product ID for sentinel: 
     ```bash 
-    python download_ID_data.py
+    python download_ID_sent_data.py
     ```
 
-   - For download all the products ID: 
+   - Download all the products ID for sentinel: 
     ```bash  
-    python download_all_data.py
+    python download_all_sent_data.py
+    ```
+    
+    - Download a particular product ID for landsat: 
+    ```bash 
+    python download_ID_landsat_data.py
+    ```
+
+   - Download all the products ID for landsat: 
+    ```bash  
+    python download_all_landsat_data.py
     ```
 
    - For display the map for the Area of Interest (AoI): 
