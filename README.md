@@ -1,11 +1,7 @@
 
 # Tobacco area classification
 
-The objective of this project is to use remote sensing to:
-
-- identify tobacco fields;
-- measure the area of tobacco field;
-- analyze tobacco leaves and estimate crop yield.
+The objective of this project is to use remote sensing to classify different regions on the bio-geographic land surface.
 
 ## How to run code
 
