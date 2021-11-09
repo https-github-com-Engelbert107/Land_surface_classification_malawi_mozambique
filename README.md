@@ -13,7 +13,7 @@ The objective of this project is to use remote sensing to:
 
 2. Setup your new virtual environment.
     - `conda create -n name_env`
-    - `conda activate -n name_env`
+    - `conda activate name_env`
 
 3. Install dependencies using the `requirements.txt` file provided
 
@@ -36,7 +36,7 @@ The objective of this project is to use remote sensing to:
      ```bash 
      python -m ipykernel install --name name_env
      ```
-    - Open Anaconda Navigator, select `mane_env`, click on `play` button and select `Open with jupyter notebook`
+    - Open Anaconda Navigator, select `nane_env`, click on `play` button and select `Open with jupyter notebook`
 
     You can also install `rasterio` and avoid the update by following:
      ```bash 
