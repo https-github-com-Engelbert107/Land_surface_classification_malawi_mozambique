@@ -19,7 +19,7 @@ The objective of this project is to use remote sensing to:
 
     You can install `geopandas` by following:
      ```bash 
-     conda activate -n name_env
+     conda activate name_env
      ```
      ```bash 
      conda config --env --add channels conda-forge
