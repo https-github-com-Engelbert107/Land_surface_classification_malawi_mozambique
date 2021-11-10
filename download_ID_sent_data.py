@@ -2,8 +2,8 @@
 from src.function_download_ID_sent_data import Download_Random_ProductID_Sentinel2_Data
 from config import args
 
-import logging
-logging.basicConfig(level=logging.DEBUG)
+# import logging
+# logging.basicConfig(level=logging.DEBUG)
 
 
 
