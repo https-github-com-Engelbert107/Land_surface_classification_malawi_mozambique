@@ -52,3 +52,11 @@ Progress day by day:
 2021/11/03  1. update the pipeline
             2. update supervised classification
 
+2021/11/08  1. working on the pipeline for Random Forest
+
+2021/11/09  1. working on the pipeline for Random Forest
+            2. Try to use another metric to measure the performance of the metric
+
+2021/11/10  1. update the github
+            2. working on the pipeline for Random Forest. Facing a dificulty to display the map on vscode.
+          
