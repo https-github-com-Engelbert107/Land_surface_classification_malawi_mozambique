@@ -1,5 +1,5 @@
 
-# Tobacco area classification
+# Land surface classification
 
 The objective of this project is to use remote sensing to classify different regions on the bio-geographic land surface.
 
