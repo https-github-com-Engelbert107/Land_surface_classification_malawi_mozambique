@@ -34,7 +34,7 @@ args = argparse.Namespace(
     # your password
     password = "password",
     # geojson file
-    geojson_file = "mapMozambique.geojson" ,
+    geojson_file = "data/mapMozambique.geojson" ,
     # the output directory
     output_dir = 'path_directory'  
 
