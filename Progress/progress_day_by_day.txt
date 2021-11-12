@@ -59,4 +59,8 @@ Progress day by day:
 
 2021/11/10  1. update the github
             2. working on the pipeline for Random Forest. Facing a dificulty to display the map on vscode.
+
+2021/11/11  1. Worhing on the presentation file.
+
+2021/11/12  1. Solve the problem that I had with vscode. But still facing another about the legend on the map for my pipeline.
           
