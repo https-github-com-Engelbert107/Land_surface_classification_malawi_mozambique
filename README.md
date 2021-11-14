@@ -79,7 +79,11 @@ The objective of this project is to use remote sensing to classify different reg
       - restart your vscode.
 
 
-
+  - To use Earth Engine in vscode, install the package
+      ```bash
+      pip install earthengine_api
+      ```
+      
   - Authenticate to the Earth Engine servers
       ```bash 
       python authenticate.py
